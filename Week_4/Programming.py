@@ -13,7 +13,7 @@ import pandas as pd
 import xml.etree.ElementTree as ET
 
 # 輸入 XML 檔路徑
-xml_file = "/content/O-A0038-003.xml"
+xml_file = "./O-A0038-003.xml"
 
 # 解析 XML
 tree = ET.parse(xml_file)
@@ -71,8 +71,8 @@ for df in (cls_data, reg_data):
     df["lat"] = df["lat"].round(2)
 
 # 輸出 CSV
-cls_data.to_csv("/content/classification_dataset.csv", index=False)
-reg_data.to_csv("/content/regression_dataset.csv", index=False)
+cls_data.to_csv("./classification_dataset.csv", index=False)
+reg_data.to_csv("./regression_dataset.csv", index=False)
 
 print("✅ 已輸出 classification_dataset.csv 與 regression_dataset.csv")
 
